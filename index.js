@@ -4,6 +4,10 @@ const puppeteer = require('puppeteer');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.get('/',(req,res)=>{
+    res.send('Home Page')
+})
+
 app.get('/fetch-images', async (req, res) => {
 //   const postUrl = 'https://web.facebook.com/share/p/15jQMrTzTT';
 const postUrl = req.query.post_url;
